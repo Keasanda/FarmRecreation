@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifa-Langa - Agri Training and Consulting</title>
+    <!-- Style CSS -->
+     <link rel="stylesheet" href="Style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- jQuery for animation controls -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- MorphSVGPlugin for GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MorphSVGPlugin.min.js"></script>
+    <style>
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fade-in-delay {
+            0% { opacity: 0; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes slide-up {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fade-in-up {
+            from { 
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes float-delay {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 1s ease-out;
+        }
+        
+        .animate-fade-in-delay {
+            animation: fade-in-delay 1.5s ease-out;
+        }
+        
+        .animate-slide-up {
+            animation: slide-up 0.8s ease-out;
+        }
+        
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-float-delay {
+            animation: float-delay 4s ease-in-out infinite;
+        }
+        
+        .animate-float-slow {
+            animation: float-slow 5s ease-in-out infinite;
+        }
+        
+        .counter-animation {
+            transition: transform 0.3s ease;
+        }
+    </style>
+      
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#home" data-page="home">
+                    <div class="bg-success p-2 rounded me-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 8C17 5.2 14.8 3 12 3C9.2 3 7 5.2 7 8C7 10.8 9.2 13 12 13C14.8 13 17 10.8 17 8Z" fill="white"/>
+                            <path d="M12 15C7.6 15 4 18.6 4 23H20C20 18.6 16.4 15 12 15Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="h5 mb-0">Ifa-Langa</h1>
+                        <p>Agri Training and Consulting</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" data-page="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-page="about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services" data-page="services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-page="contact">Contact</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-success ms-3">Get Consultation</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page-section">
+            <div class="container">
+                <div class="row align-items-center hero-section rounded-3 p-4 mb-5">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Transforming Agriculture Through Education</h1>
+                        <p class="lead mb-4">Ifa-Langa provides expert agricultural training and consulting services to help farmers maximize productivity and sustainability.</p>
+                        <div class="d-flex gap-3">
+                            <button class="btn btn-success btn-lg">Our Services</button>
+                            <button class="btn btn-outline-success btn-lg">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="farm-img">
+                            <!-- Tractor Animation -->
+                            <div class="tractor-animation">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> 
+                                    <g>
+                                        <circle style="fill:#9AF4EF;" cx="256" cy="256" r="256"/>
+                                    </g>
+                                    <g style="opacity:0.3;">
+                                        <path style="fill:#FFFFF4;" d="M407.376,49.583C294.06,79.836,210.577,183.148,210.577,306c0,80.664,36.031,152.869,92.82,201.548    C422.126,485.311,512,381.182,512,256C512,171.264,470.804,96.177,407.376,49.583z"/>
+                                    </g>
+                                    <g>
+                                        <path style="fill:#36B294;" d="M215,214.034c-11.248-9.305-27.5-1.034-36.25-8.534c-11.695-10.024-14.351-12.646-25.031-15.384    c-9.75-2.5-18.578,3.156-27.969-9.366c-6.75-9-13.117-8.089-21.263-6.089s-10.649-0.214-21.612-9.286    c-7.25-6-13.875-8.125-28.875-7.625c-12.651,0.422-22.601-2.382-31.849-5.894c-8.893,19.938-15.34,41.198-18.894,63.438    c36.23,3.803,47.12,2.15,61.243,6.706c15.5,5,166.167,35.5,168.834,34c2.667-1.5,4.436-25.304,4.436-25.304    C222.639,227.962,222.433,220.183,215,214.034z"/>
+                                    </g>
+                                    <g style="opacity:0.4;">
+                                        <path style="fill:#FFFFF4;" d="M358.667,306c0,56.513,39.963,103.67,93.165,114.815C489.354,376.277,512,318.795,512,256    c0-22.041-2.789-43.43-8.027-63.837c-8.98-2.201-18.314-3.496-27.973-3.496C411.199,188.667,358.667,241.198,358.667,306z"/>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path style="fill:#674447;" d="M422.504,277.018c-2.793,0-5.054-2.262-5.054-5.051v-54.398c0-2.789,2.262-5.051,5.054-5.051      c2.793,0,5.054,2.262,5.054,5.051v54.398C427.558,274.757,425.297,277.018,422.504,277.018z"/>
+                                            </g>
+                                        </g>
+                                    <g class="tree">
+                                        <g>
+                                            <g>
+                                                <path style="fill:#43AB5F;" d="M454.336,212.935c0,17.581-14.252,31.833-31.833,31.833c-17.581,0-31.833-14.252-31.833-31.833      s14.252-71.625,31.833-71.625C440.084,141.311,454.336,195.354,454.336,212.935z"/>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path style="fill:#71BE63;" d="M422.503,141.31c-4.413,0-8.616,3.411-12.437,8.791h0.001c16.091,0,29.135,49.464,29.135,65.555      c0,13.997-9.878,25.667-23.038,28.473c2.049,0.414,4.167,0.639,6.338,0.639c17.581,0,31.833-14.252,31.833-31.833      C454.336,195.354,440.083,141.31,422.503,141.31z"/>
+                                            </g>
+                                        </g>
+                                      </g>
+                                    </g>
+                                    <g style="opacity:0.6;" class="cloud">
+                                        <path style="fill:#FFFFFF;" d="M166.646,141.623c0-10.575,8.573-19.149,19.149-19.149c1.596,0,3.122,0.252,4.604,0.62    c4.997-5.396,12.081-8.827,20.015-8.827c15.108,0,27.355,12.247,27.355,27.355H166.646z"/>
+                                    </g>
+                                    <g style="opacity:0.6;" class="cloud">
+                                        <path style="fill:#FFFFFF;" d="M164.295,65c0-9.442,7.654-17.096,17.096-17.096c1.425,0,2.788,0.225,4.111,0.554    c4.461-4.818,10.786-7.881,17.87-7.881c13.488,0,24.423,10.935,24.423,24.423H164.295z"/>
+                                    </g>
+                                    <g style="opacity:0.6;" class="cloud">
+                                        <path style="fill:#FFFFFF;" d="M400,84.615c0-7.583-6.148-13.731-13.731-13.731c-1.145,0-2.239,0.181-3.302,0.445    c-3.583-3.869-8.663-6.33-14.352-6.33C357.782,65,349,73.782,349,84.615H400z"/>
+                                    </g>
+                                    <g>
+                                        <path style="fill:#00A07D;" d="M263.878,248c-6.73,0-7.852-6.655-8.512-8c-7.366-15-16.283-8-30.913-8    c-11.438,0-13.776-16.667-20.16-16c-6.384,0.667-16.669,11.333-25.536,8c-12.724-4.784-13.123-12-25.537-16    c-10.954-3.53-20.216-1-25.537-8c-10.359-13.63-17.822,1.25-34.049-8c-16.503-9.408-21.635,8-34.048,8    c-13.041,0-8.513-16-25.537-16c-9.644,0-15.328,11.76-27.526,15.085C2.303,217.397,0,236.428,0,256    c0,10.092,0.658,20.027,1.81,29.813c3.915,3.633,8.148,6.828,12.393,8.651C29.422,301,349,306.615,349,306.615V280    c-23.409,0-23.409-16-42.561-16C280.636,264,283.03,248,263.878,248z"/>
+                                    </g>
+                                    <g>
+                                        <path style="fill:#94D75B;" d="M107,433.548l237-126.934l-6-12.948c-57.385,0-156.966-58.334-338-37.667    c0,63.767,23.368,122.04,61.938,166.856C86.164,428.642,107,433.548,107,433.548z"/>
+                                    </g>
+                                    <g>
+                                        <path style="fill:#B0EB81;" d="M338,293.667c-52.623,0-140.781-49.009-294.643-41.213    c136.795,0.118,220.685,61.353,263.643,61.353l12-4.476l19.357-14.892L338,293.667z"/>
+                                    </g>
+                                    <g class="cloud">
+                                        <path style="fill:#FFFFFF;" d="M180.261,119.675c-2.303,0-4.479,0.453-6.565,1.111c-6.607-9.498-17.568-15.743-30.014-15.743    s-23.407,6.245-30.014,15.743c-2.086-0.658-4.262-1.111-6.565-1.111c-12.121,0-21.948,9.826-21.948,21.948h117.054    C202.208,129.502,192.382,119.675,180.261,119.675z"/>
+                                    </g>
+                                    <g class="cloud">
+                                        <path style="fill:#FFFFFF;" d="M352,99.333c-2.518,0-4.898,0.496-7.179,1.215c-7.225-10.386-19.21-17.215-32.821-17.215    s-25.596,6.829-32.821,17.215c-2.281-0.719-4.661-1.215-7.179-1.215c-13.255,0-24,10.745-24,24h128    C376,110.078,365.255,99.333,352,99.333z"/>
+                                    </g>
+                                    <g class="cloud">
+                                        <path style="fill:#FFFFFF;" d="M184.705,83.333c0-14.175,11.491-25.667,25.667-25.667c2.139,0,4.185,0.338,6.172,0.832    c6.697-7.233,16.193-11.832,26.828-11.832c20.25,0,36.667,16.416,36.667,36.667H184.705z"/>
+                                    </g>
+                                    <g>
+                                        <path style="fill:#71BE63;" d="M22.667,361.284C62.823,450.136,152.158,512,256,512c141.385,0,256-114.615,256-256    c0-2.672-0.12-5.314-0.201-7.966C353.492,248.76,281.706,360,22.667,360V361.284z"/>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path style="fill:#674447;" d="M349.002,309.33c-3.169,0-5.736-2.566-5.736-5.731v-61.73c0-3.165,2.566-5.731,5.736-5.731      s5.735,2.566,5.735,5.731v61.73C354.737,306.764,352.171,309.33,349.002,309.33z"/>
+                                            </g>
+                                        </g>
+                                    <g class="tree">
+                                        <g>
+                                            <g>
+                                                <path style="fill:#43AB5F;" d="M385.123,236.611c0,19.95-16.173,36.123-36.123,36.123s-36.123-16.173-36.123-36.123      S329.05,155.333,349,155.333S385.123,216.66,385.123,236.611z"/>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path style="fill:#71BE63;" d="M349,155.333c-5.008,0-9.777,3.871-14.113,9.976h0.001c18.26,0,33.062,56.13,33.062,74.39      c0,15.883-11.209,29.126-26.143,32.311c2.325,0.47,4.729,0.725,7.192,0.725c19.95,0,36.124-16.173,36.124-36.123      C385.124,216.66,368.95,155.333,349,155.333z"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    </g>
+                                    <g>
+                                        <path style="fill:#43AB5F;" id="tractorPath" d="M511.39,272.76C398.88,273.31,185,439.91,27.5,452.67,73.36,496.14,187.82,579,256,579,391.75,579,502.75,406.32,511.39,272.76Z"/>
+                                    </g>
+                                  <g class="dot-blk">
+                                    <g>
+                                        <circle style="fill:#B0EB81;" cx="195.541" cy="448.667" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#94D75B;" cx="226.667" cy="370.266" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#94D75B;" cx="407.066" cy="282.71" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#71BE63;" cx="295.765" cy="459.333" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#B0EB81;" cx="331.691" cy="418" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#71BE63;" cx="256" cy="427.482" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#71BE63;" cx="144" cy="455.333" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#B0EB81;" cx="150.667" cy="399.047" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#B0EB81;" cx="262.667" cy="345.333" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#94D75B;" cx="95.98" cy="395.713" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#B0EB81;" cx="378.457" cy="389.047" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#B0EB81;" cx="443.002" cy="370.266" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#71BE63;" cx="319.543" cy="382.38" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#71BE63;" cx="378.457" cy="433.548" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#71BE63;" cx="398.667" cy="352" r="6.667"/>
+                                    </g>
+                                    <g>
+                                        <circle style="fill:#71BE63;" cx="443.002" cy="313.281" r="6.667"/>
+                                    </g> 
+                                  </g>
+                                  <g class="tractor">
+                                    <polygon points="283.16 27.17 232.01 27.17 180.86 27.17 138.25 143.09 232.01 143.24 325.77 143.09 283.16 27.17" style="fill: #666"/>
+                                    <polygon points="278.29 34.15 315.77 136.12 232.03 136.25 148.25 136.12 185.73 34.15 278.29 34.15" style="fill: #64b3f5"/>
+                                    <path d="M199.71,34.15H210l38.41,101.09H238.12Zm18.5,0h40l38.4,101.09h-40Z" style="fill: #e1f1fb"/>
+                                    <path d="M292.57,18.27H169c-1.57,0-3.56,1.46-2.85,2.85l5.39,10.46c.71,1.38,1.29,2.84,2.84,2.84H287.78c1.55,0,2.19-1.42,2.85-2.84l4.78-10.46C296.07,19.69,294.13,18.27,292.57,18.27Z" style="fill: #ff0"/>
+                                    <path d="M239.34,132.74H48.78c-12.54,0-6,10-6,22.53v21.44a22.61,22.61,0,0,0,.16,2.62H12.36v13.46H49.44a22.7,22.7,0,0,0,16.13,6.72H339.05L307.25,113l-48.64.48Z" style="fill: #445a64"/>
+                                    <g>
+                                      <path d="M20.12,194.71H49.44a27.93,27.93,0,0,0,16.13,4.8H339.06l-5.49-10.64H20.12Z" style="fill: #36464e"/>
+                                      <path d="M17.08,168.24H3a3.05,3.05,0,0,0-3,3v29.56a3,3,0,0,0,3,3h14a3,3,0,0,0,3-3V171.28A3.05,3.05,0,0,0,17.08,168.24Z" style="fill: #36464e"/>
+                                    </g>
+                                    <g id="bonet">
+                                      <polygon points="86.22 75.91 79.88 75.91 79.88 97.76 86.22 97.76 86.22 75.91" style="fill: #4d4d4d"/>
+                                      <path d="M91.16,66.14H74.94a2.63,2.63,0,0,0-2.62,2.61v9.62A2.63,2.63,0,0,0,74.94,81H91.16a2.62,2.62,0,0,0,2.61-2.61V68.75A2.62,2.62,0,0,0,91.16,66.14Z" style="fill: #606060"/>
+                                      <path d="M157.64,85.58,52.74,94.13C32.37,95.79,25.81,116,25.81,138.48V148c0,22.47-1.12,28.82,19.3,28.82H132.6c20.42,0,37.13-18.39,37.13-40.86v-9.5C169.73,104,178,83.92,157.64,85.58Z" style="fill: #ff0"/>
+                                      <path d="M26.18,129.69c-.25,2.86-.37,5.8-.37,8.78V148c0,22.47-1.12,28.82,19.3,28.82H132.6c20.42,0,37.13-18.39,37.13-40.86v-9.5c0-11,2-21.48,1.62-29.06L55.92,105.22C39.11,106.36,30.14,116.28,26.18,129.69Z" style="fill: #ffd500"/>
+                                      <path id="chimney" d="M145.68,23.49v120.1a5.62,5.62,0,0,0,5.6,5.6h0a5.61,5.61,0,0,0,5.6-5.6V15.28c0-10.45-11.34-16.71-17.25-15V11.7c3.6-.65,6.08,1.92,6.08,3.86C145.7,18.2,145.68,20.84,145.68,23.49Z" style="fill: #424242"/>
+                                    </g>
+                                    <g id="tyre-2">
+                                      <path d="M283.05,129.07c-2.12.16-4.23.43-6.29.79L275,126.29a2.42,2.42,0,0,0-2.68-1.58l-3.41.88a2.4,2.4,0,0,0-1.58,2.67l.14,4q-3,1-5.9,2.35l-2.63-3a2.39,2.39,0,0,0-3-.87l-3.08,1.69a2.43,2.43,0,0,0-.87,3l1.14,3.85A62.67,62.67,0,0,0,248,143l-3.31-2.27a2.41,2.41,0,0,0-3.11-.1L239,143a2.41,2.41,0,0,0-.1,3.1L241,149.6a62.87,62.87,0,0,0-4,4.88l-3.77-1.38a2.42,2.42,0,0,0-3,.68l-1.89,3a2.42,2.42,0,0,0,.68,3l2.85,2.82q-1.48,2.79-2.7,5.74l-4-.4a2.44,2.44,0,0,0-2.78,1.42l-1.08,3.34a2.42,2.42,0,0,0,1.4,2.77l3.47,2c-.49,2-.89,4.12-1.18,6.23l-4,.6c-1.2.19-2.26.85-2.33,2.06l-.23,3.51c-.08,1.21.9,2,2.06,2.33l3.87,1.11a62.69,62.69,0,0,0,.4,6.32l-3.69,1.58a2.41,2.41,0,0,0-1.75,2.57l.66,3.45a2.41,2.41,0,0,0,2.57,1.75l4,.11a61.5,61.5,0,0,0,2,6l-3.17,2.44a2.4,2.4,0,0,0-1,2.92l1.49,3.18a2.42,2.42,0,0,0,2.93,1.06l3.91-.89c1.05,1.84,2.18,3.63,3.4,5.35l-2.47,3.15a2.42,2.42,0,0,0-.29,3.09l2.24,2.72a2.42,2.42,0,0,0,3.1.29l3.57-1.84A62.94,62.94,0,0,0,246.8,241l-1.61,3.67a2.43,2.43,0,0,0,.48,3.08l2.85,2.07a2.41,2.41,0,0,0,3.07-.49l3-2.67a62.32,62.32,0,0,0,5.56,3.06l-.65,3.94a2.42,2.42,0,0,0,1.23,2.86l3.27,1.3a2.43,2.43,0,0,0,2.86-1.23l2.23-3.33a62.39,62.39,0,0,0,6.16,1.57l.35,4a2.4,2.4,0,0,0,1.9,2.45l3.49.45a2.42,2.42,0,0,0,2.46-1.9l1.35-3.8c1,0,2.08.08,3.13.08s2.14,0,3.2-.08l1.34,3.78a2.42,2.42,0,0,0,2.45,1.91l3.5-.44a2.43,2.43,0,0,0,1.91-2.45l.35-4a62.92,62.92,0,0,0,6.15-1.57l2.23,3.31a2.42,2.42,0,0,0,2.85,1.24l3.27-1.29a2.43,2.43,0,0,0,1.24-2.86l-.64-4c1.9-.93,3.76-2,5.55-3.06l3,2.67a2.42,2.42,0,0,0,3.07.49l2.85-2.07a2.42,2.42,0,0,0,.49-3.07l-1.61-3.69a62.8,62.8,0,0,0,4.61-4.33l3.57,1.84a2.41,2.41,0,0,0,3.09-.29l2.25-2.71a2.43,2.43,0,0,0-.29-3.1l-2.47-3.16c1.21-1.72,2.35-3.51,3.39-5.35l3.91.9a2.41,2.41,0,0,0,2.92-1.06l1.5-3.18a2.41,2.41,0,0,0-1.05-2.93l-3.17-2.44c.75-2,1.4-4,2-6l4-.1a2.42,2.42,0,0,0,2.58-1.74l.66-3.46a2.42,2.42,0,0,0-1.75-2.57l-3.69-1.58c.22-2.08.36-4.19.38-6.32l3.87-1.1a2.43,2.43,0,0,0,2.06-2.33l-.22-3.52c-.07-1.2-1.14-1.87-2.33-2.06l-4-.61q-.45-3.17-1.18-6.23l3.45-2a2.42,2.42,0,0,0,1.42-2.77l-1.09-3.35a2.41,2.41,0,0,0-2.77-1.41l-4,.38c-.81-1.95-1.71-3.87-2.7-5.73l2.85-2.82a2.42,2.42,0,0,0,.68-3l-1.88-3a2.42,2.42,0,0,0-3-.68l-3.77,1.38a63.27,63.27,0,0,0-4-4.89l2.07-3.44a2.4,2.4,0,0,0-.1-3.1l-2.56-2.42a2.41,2.41,0,0,0-3.11.1L327.83,143a60.88,60.88,0,0,0-5.12-3.73l1.14-3.84a2.41,2.42,0,0,0-.86-3l-3.08-1.7a2.43,2.43,0,0,0-3,.87l-2.64,3q-2.86-1.31-5.9-2.34l.15-4a2.41,2.41,0,0,0-1.57-2.68l-3.41-.88a2.42,2.42,0,0,0-2.68,1.58l-1.81,3.58c-2.09-.36-4.22-.63-6.38-.79l-.85-3.92c-.26-1.18-1-2.2-2.2-2.2h-3.52c-1.21,0-1.94,1-2.2,2.2Z" style="fill: #202020"/>
+                                      <path d="M286,157a34.45,34.45,0,1,0,34.45,34.44A34.44,34.44,0,0,0,286,157Z" style="fill: #ffd500"/>
+                                    </g>
+                                    <g id="tyre-1">
+                                      <path d="M100,157.28c-1.68.13-3.33.34-5,.62l-1.42-2.81a1.9,1.9,0,0,0-2.11-1.24l-2.68.69a1.9,1.9,0,0,0-1.25,2.1l.12,3.16a45.69,45.69,0,0,0-4.64,1.84L81,159.27a1.91,1.91,0,0,0-2.36-.68l-2.42,1.33a1.9,1.9,0,0,0-.69,2.35l.9,3c-1.39.92-2.74,1.9-4,2.95l-2.6-1.79a1.9,1.9,0,0,0-2.45-.08l-2,1.89a1.92,1.92,0,0,0-.08,2.45l1.63,2.72c-1.12,1.22-2.18,2.51-3.18,3.84l-3-1.08a1.91,1.91,0,0,0-2.39.53l-1.49,2.34a1.91,1.91,0,0,0,.53,2.39l2.25,2.23c-.78,1.46-1.49,3-2.13,4.51l-3.13-.31A1.91,1.91,0,0,0,52.24,189l-.86,2.63a1.91,1.91,0,0,0,1.11,2.19l2.73,1.59c-.39,1.61-.7,3.25-.93,4.91l-3.12.48c-.94.14-1.78.67-1.83,1.62l-.18,2.76A1.9,1.9,0,0,0,50.78,207l3,.87a47.87,47.87,0,0,0,.31,5l-2.9,1.25a1.89,1.89,0,0,0-1.38,2l.52,2.72a1.91,1.91,0,0,0,2,1.38l3.16.08q.66,2.43,1.55,4.75L54.61,227a1.89,1.89,0,0,0-.83,2.3L55,231.79a1.9,1.9,0,0,0,2.3.83l3.08-.7c.82,1.45,1.72,2.85,2.68,4.21l-2,2.48a1.9,1.9,0,0,0-.23,2.43l1.76,2.14a1.91,1.91,0,0,0,2.44.23L67.86,242q1.74,1.78,3.64,3.41l-1.27,2.89a1.9,1.9,0,0,0,.37,2.42l2.25,1.63a1.9,1.9,0,0,0,2.41-.37l2.37-2.11A47.52,47.52,0,0,0,82,252.24l-.5,3.1a1.9,1.9,0,0,0,1,2.25l2.58,1a1.9,1.9,0,0,0,2.25-1L89.05,255a48.27,48.27,0,0,0,4.84,1.23l.28,3.14a1.91,1.91,0,0,0,1.5,1.94l2.74.34a1.9,1.9,0,0,0,1.94-1.49l1.06-3c.82,0,1.64.06,2.47.06s1.68,0,2.51-.06l1.06,3a1.89,1.89,0,0,0,1.93,1.49l2.75-.34a1.9,1.9,0,0,0,1.5-1.93l.29-3.15a46.19,46.19,0,0,0,4.83-1.24l1.76,2.61a1.89,1.89,0,0,0,2.24,1l2.58-1a1.92,1.92,0,0,0,1-2.25l-.51-3.11q2.25-1.11,4.37-2.41l2.35,2.1a1.91,1.91,0,0,0,2.42.38l2.24-1.62a1.9,1.9,0,0,0,.39-2.42l-1.27-2.91a48.65,48.65,0,0,0,3.63-3.41l2.81,1.45a1.9,1.9,0,0,0,2.44-.23L147,241a1.92,1.92,0,0,0-.23-2.44l-1.95-2.49a49.81,49.81,0,0,0,2.67-4.21l3.07.71a1.91,1.91,0,0,0,2.31-.83l1.18-2.51a1.9,1.9,0,0,0-.82-2.3L150.67,225q.89-2.33,1.55-4.75l3.14-.08a1.91,1.91,0,0,0,2-1.37l.52-2.73a1.9,1.9,0,0,0-1.37-2l-2.92-1.25c.19-1.63.29-3.29.32-5l3-.86c.92-.27,1.67-.89,1.61-1.84l-.16-2.76a1.92,1.92,0,0,0-1.84-1.63l-3.13-.48c-.23-1.66-.54-3.3-.93-4.91l2.73-1.58a1.92,1.92,0,0,0,1.11-2.19l-.85-2.63a1.93,1.93,0,0,0-2.19-1.11l-3.14.3c-.64-1.54-1.34-3-2.12-4.51l2.23-2.21a1.91,1.91,0,0,0,.54-2.39l-1.48-2.34a1.9,1.9,0,0,0-2.39-.54l-3,1.08q-1.5-2-3.18-3.84l1.62-2.71a1.91,1.91,0,0,0-.07-2.45l-2-1.89a1.9,1.9,0,0,0-2.45.07l-2.61,1.79q-1.95-1.56-4-2.94l.89-3a1.89,1.89,0,0,0-.67-2.35l-2.43-1.34a1.9,1.9,0,0,0-2.35.68l-2.08,2.37a49.38,49.38,0,0,0,4.65-1.84l.12-3.14a1.9,1.9,0,0,0-1.24-2.11l-2.68-.69a1.9,1.9,0,0,0-2.11,1.24l-1.43,2.82a48.61,48.61,0,0,0,5-.62l-.68-3.09c-.2-.93-.78-1.73-1.73-1.73h-2.77c-1,0-1.53.81-1.73,1.73Z" style="fill: #202020"/>
+                                      <path d="M102.39,179.27a27.12,27.12,0,1,0,27.12,27.12A27.12,27.12,0,0,0,102.39,179.27Z" style="fill: #ffd500"/>
+                                    </g>
+                                    <path d="M321.66,109.53H257.2l-47.82,48.14,7.13,3.09L258.87,119l60.49-.63,36.9,33.18s4.83-4.84,4.51-5.55S321.66,109.53,321.66,109.53Z" style="fill: #ff0"/>
+                                  </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Core Services Section (from React) -->
+            <section class="py-5 bg-gradient-custom position-relative overflow-hidden">
+                <!-- Background Image -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-pattern"></div>
+                
+                <div class="container position-relative">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold text-dark mb-4 animate-fade-in">Our Core Services</h2>
+                        <p class="lead text-muted mx-auto animate-fade-in" style="max-width: 800px;">
+                            We specialize in three primary areas that form the foundation of successful agricultural operations: 
+                            comprehensive training, expert consulting, and strategic advisory services.
+                        </p>
+                    </div>
+
+                    <div class="row g-4 mb-5">
+                        <!-- Training Programs -->
+                        <div class="col-lg-4">
+                            <div class="card service-card-hover h-100 p-4 border-0 shadow-sm">
+                                <div class="text-center mb-4">
+                                    <i data-lucide="book-open" class="text-success" style="width: 48px; height: 48px;"></i>
+                                </div>
+                                <h3 class="h4 fw-bold text-dark text-center mb-3">Training Programs</h3>
+                                <p class="text-muted text-center mb-4">
+                                    Comprehensive agricultural training programs designed to enhance farming skills and knowledge through hands-on workshops and certification courses.
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Hands-on Workshops
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Certification Programs
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Field Training
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Best Practices
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-4">
+                                    <a href="#" class="text-success fw-semibold text-decoration-none">
+                                        Learn More <i data-lucide="arrow-right" class="ms-1" style="width: 16px; height: 16px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Consulting Services -->
+                        <div class="col-lg-4">
+                            <div class="card service-card-hover h-100 p-4 border-0 shadow-sm">
+                                <div class="text-center mb-4">
+                                    <i data-lucide="message-circle" class="text-success" style="width: 48px; height: 48px;"></i>
+                                </div>
+                                <h3 class="h4 fw-bold text-dark text-center mb-3">Consulting Services</h3>
+                                <p class="text-muted text-center mb-4">
+                                    Expert one-on-one consulting to address specific agricultural challenges and optimize your farming operations for maximum efficiency.
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Farm Assessment
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Problem Solving
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Custom Solutions
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Implementation Support
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-4">
+                                    <a href="#" class="text-success fw-semibold text-decoration-none">
+                                        Learn More <i data-lucide="arrow-right" class="ms-1" style="width: 16px; height: 16px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Advisory Services -->
+                        <div class="col-lg-4">
+                            <div class="card service-card-hover h-100 p-4 border-0 shadow-sm">
+                                <div class="text-center mb-4">
+                                    <i data-lucide="target" class="text-success" style="width: 48px; height: 48px;"></i>
+                                </div>
+                                <h3 class="h4 fw-bold text-dark text-center mb-3">Advisory Services</h3>
+                                <p class="text-muted text-center mb-4">
+                                    Strategic advisory services providing long-term guidance and planning to help you make informed decisions about your agricultural future.
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Strategic Planning
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Market Analysis
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Risk Assessment
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="bg-success rounded-circle me-3" style="width: 8px; height: 8px;"></div>
+                                        Growth Planning
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-4">
+                                    <a href="#" class="text-success fw-semibold text-decoration-none">
+                                        Learn More <i data-lucide="arrow-right" class="ms-1" style="width: 16px; height: 16px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="py-5 bg-light position-relative">
+                <!-- Side Images -->
+                <div class="position-absolute top-50 start-0 translate-middle-y w-25 h-50 opacity-10 d-none d-lg-block">
+                    <img 
+                        src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Farm equipment" 
+                        class="w-100 h-100 object-fit-cover rounded-end"
+                    />
+                </div>
+                <div class="position-absolute top-50 end-0 translate-middle-y w-25 h-50 opacity-10 d-none d-lg-block">
+                    <img 
+                        src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                        alt="Agricultural field" 
+                        class="w-100 h-100 object-fit-cover rounded-start"
+                    />
+                </div>
+                
+                <div class="container position-relative">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold text-dark mb-4">Why Choose Ifa-Langa?</h2>
+                        <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                            We combine cutting-edge agricultural science with practical farming experience 
+                            to deliver solutions that work in the real world.
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card border-0 shadow-sm h-100 text-center p-4 animate-fade-in-up">
+                                <div class="text-center mb-3">
+                                    <i data-lucide="trending-up" class="text-success" style="width: 32px; height: 32px;"></i>
+                                </div>
+                                <h4 class="h5 fw-semibold text-dark mb-2">Increased Productivity</h4>
+                                <p class="text-muted">Our expert consultations have helped farmers increase crop yields by an average of 35%.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card border-0 shadow-sm h-100 text-center p-4 animate-fade-in-up">
+                                <div class="text-center mb-3">
+                                    <i data-lucide="users" class="text-success" style="width: 32px; height: 32px;"></i>
+                                </div>
+                                <h4 class="h5 fw-semibold text-dark mb-2">Expert Team</h4>
+                                <p class="text-muted">Our team of certified agricultural specialists brings decades of combined experience.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card border-0 shadow-sm h-100 text-center p-4 animate-fade-in-up">
+                                <div class="text-center mb-3">
+                                    <i data-lucide="award" class="text-success" style="width: 32px; height: 32px;"></i>
+                                </div>
+                                <h4 class="h5 fw-semibold text-dark mb-2">Proven Results</h4>
+                                <p class="text-muted">Award-winning consultancy services trusted by over 500 successful farming operations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card border-0 shadow-sm h-100 text-center p-4 animate-fade-in-up">
+                                <div class="text-center mb-3">
+                                    <i data-lucide="leaf" class="text-success" style="width: 32px; height: 32px;"></i>
+                                </div>
+                                <h4 class="h5 fw-semibold text-dark mb-2">Sustainable Practices</h4>
+                                <p class="text-muted">Environmentally conscious solutions that benefit both your farm and the planet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="py-5 position-relative">
+                <!-- Background Pattern -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 opacity-5">
+                    <div class="row g-0 h-100">
+                        <div class="col-4">
+                            <img 
+                                src="https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                                alt="Agricultural consultation" 
+                                class="w-100 h-100 object-fit-cover"
+                            />
+                        </div>
+                        <div class="col-4">
+                            <img 
+                                src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                                alt="Farm field" 
+                                class="w-100 h-100 object-fit-cover"
+                            />
+                        </div>
+                        <div class="col-4">
+                            <img 
+                                src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                                alt="Agricultural equipment" 
+                                class="w-100 h-100 object-fit-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container position-relative">
+                    <div class="row g-4 text-center mx-auto" style="max-width: 900px;">
+                        <div class="col-md-4">
+                            <div class="p-5">
+                                <div class="display-4 fw-bold text-success mb-2 counter-animation">500+</div>
+                                <div class="h5 text-dark">Farms Consulted</div>
+                                <div class="text-muted mt-2">Across multiple regions</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-5">
+                                <div class="display-4 fw-bold text-success mb-2 counter-animation">35%</div>
+                                <div class="h5 text-dark">Average Yield Increase</div>
+                                <div class="text-muted mt-2">Through our programs</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-5">
+                                <div class="display-4 fw-bold text-success mb-2 counter-animation">15+</div>
+                                <div class="h5 text-dark">Years Experience</div>
+                                <div class="text-muted mt-2">In agricultural consulting</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners Section -->
+            <section class="py-5 bg-white">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold text-dark mb-4">Our Trusted Partners</h2>
+                        <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                            We collaborate with leading organizations and institutions to deliver exceptional agricultural solutions.
+                        </p>
+                    </div>
+                    
+                    <div class="row g-4 align-items-center justify-content-center">
+                        <!-- Partner logos would go here -->
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                            <div class="p-3 bg-light rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                                <img 
+                                    src="https://i.postimg.cc/pdf4Jcbq/2.png" 
+                                    alt="SAOA" 
+                                    class="img-fluid partner-logo"
+                                    style="max-height: 60px;"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                            <div class="p-3 bg-light rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                                <img 
+                                    src="https://i.postimg.cc/KYxJxZwD/3.jpg" 
+                                    alt="ARC-LNR" 
+                                    class="img-fluid partner-logo"
+                                    style="max-height: 60px;"
+                                />
+                            </div>
+                        </div>
+                        <!-- Add more partner logos as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-5 bg-success bg-gradient position-relative overflow-hidden">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-10"></div>
+                <div class="container position-relative text-center text-white">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Farm?</h2>
+                    <p class="lead mb-4 mx-auto" style="max-width: 600px;">
+                        Get personalized agricultural consultation and start seeing results in your next growing season.
+                    </p>
+                    <button class="btn btn-light btn-lg text-success fw-semibold px-4 py-3">
+                        Schedule Free Consultation 
+                        <i data-lucide="arrow-right" class="ms-2" style="width: 20px; height: 20px;"></i>
+                    </button>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page-section bg-light d-none">
+            <!-- About content remains the same -->
+        </section>
+
+        <!-- Services Page -->
+        <section id="services" class="page-section d-none">
+            <!-- Services content remains the same -->
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page-section bg-light d-none">
+            <!-- Contact content remains the same -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <!-- Footer content remains the same -->
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lucide Icons JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Simple client-side routing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize page based on URL hash
+            const hash = window.location.hash || '#home';
+            showPage(hash.substring(1));
+            
+            // Set active nav link
+            setActiveNavLink(hash.substring(1));
+            
+            // Add event listeners to nav links
+            document.querySelectorAll('a[data-page]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    
+                    // Update URL without reloading page
+                    window.location.hash = page;
+                    
+                    // Show the selected page
+                    showPage(page);
+                    
+                    // Update active nav link
+                    setActiveNavLink(page);
+                    
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+            
+            // Handle form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+            
+            // Listen for hash changes (back/forward buttons)
+            window.addEventListener('hashchange', function() {
+                const page = window.location.hash.substring(1) || 'home';
+                showPage(page);
+                setActiveNavLink(page);
+            });
+            
+            // Initialize tractor animation
+            initTractorAnimation();
+        });
+        
+        function showPage(page) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.add('d-none');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(page);
+            if (targetPage) {
+                targetPage.classList.remove('d-none');
+            }
+        }
+        
+        function setActiveNavLink(page) {
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to current page link
+            const activeLink = document.querySelector(`a[data-page="${page}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+        
+        function initTractorAnimation() {
+            // Tractor animation code remains the same
+        }
+
+
+             lucide.createIcons();
+        
+        // Simple counter animation for statistics
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter-animation');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                let current = 0;
+                const increment = target / 50;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current) + (counter.textContent.includes('%') ? '%' : '+');
+                        setTimeout(updateCounter, 50);
+                    } else {
+                        counter.textContent = target + (counter.textContent.includes('%') ? '%' : '+');
+                    }
+                };
+                
+                // Start counter when element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifa-Langa - Footer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        :root {
+            --primary-green: #97c151;
+            --dark-green: #0d6e3e;
+            --light-green: #e8f5e9;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .footer-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        /* Animation for demo purposes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .demo-content {
+            animation: fadeIn 1s ease-in;
+        }
+
+
+        .footer-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        /* Animation for demo purposes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .demo-content {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer-container">
+        <!-- Demo content to show the footer in context -->
+        <div class="content">
+            <div class="max-w-4xl mx-auto demo-content">
+                <h1 class="text-3xl font-bold text-gray-800 mb-4">Ifa-Langa Agricultural Consulting</h1>
+                <p class="text-lg text-gray-600 mb-8">This is a demonstration of the footer component. Scroll down to see the footer.</p>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Our Mission</h2>
+                    <p class="text-gray-600">To provide expert agricultural consulting services that help farmers increase productivity and sustainability through innovative solutions and practical training.</p>
+                </div>
+            </div>
+        </div>
+
+     
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white relative overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 opacity-5">
+                <img 
+                    src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                    alt="Agricultural background" 
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-green-600 p-2 rounded-lg">
+                                <i data-lucide="leaf" class="h-5 w-5 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">Ifa-Langa</h3>
+                                <p class="text-sm text-green-400">Agricultural Excellence</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Leading agricultural consultancy providing innovative solutions for sustainable farming and crop optimization.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-300 hover:text-green-400 transition-colors">Home</a></li>
+                            <li><a href="#about" class="text-gray-300 hover:text-green-400 transition-colors">About Us</a></li>
+                            <li><a href="#services" class="text-gray-300 hover:text-green-400 transition-colors">Services</a></li>
+                            <li><a href="#contact" class="text-gray-300 hover:text-green-400 transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><span class="text-gray-300">Training Programs</span></li>
+                            <li><span class="text-gray-300">Consulting Services</span></li>
+                            <li><span class="text-gray-300">Advisory Services</span></li>
+                            <li><span class="text-gray-300">Farm Planning</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="phone" class="h-4 w-4 text-green-400"></i>
+                                <span class="text-gray-300 text-sm">+27 12 345 6789</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="mail" class="h-4 w-4 text-green-400"></i>
+                                <span class="text-gray-300 text-sm">info@ifa-langa.co.za</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="map-pin" class="h-4 w-4 text-green-400"></i>
+                                <span class="text-gray-300 text-sm">123 Farm Road, Agricultural Valley</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 Ifa-Langa. All rights reserved. Professional agricultural consultancy services.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
