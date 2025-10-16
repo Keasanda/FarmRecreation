@@ -128,7 +128,7 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="Testhome.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
+                    <a href="Header.html.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
                     <a href="About.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">About</a>
                     <a href="Service.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Services</a>
                     <a href="Contact.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Contact</a>
@@ -148,7 +148,7 @@
             <!-- Mobile Menu (Hidden by default) -->
             <div id="mobile-menu" class="hidden md:hidden bg-white py-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-3 px-2">
-                    <a href="Testhome.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
+                    <a href="Header.html.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
                     <a href="About.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">About</a>
                     <a href="Service.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Services</a>
                     <a href="Contact.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Contact</a>
@@ -161,125 +161,143 @@
     <!-- Original About Page Content -->
     <div>
         <!-- Hero Section -->
-        <section class="py-16 bg-gradient-to-r from-[#A76545] to-[#FFA55D] relative overflow-hidden">
-            <!-- Background Image -->
-            <div class="absolute inset-0 opacity-20">
-                <img 
-                    src="https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Agricultural consultation" 
-                    class="w-full h-full object-cover"
-                />
-            </div>
-            <div class="container mx-auto px-4 text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">About Ifa-Langa</h1>
-                <p class="text-xl max-w-3xl mx-auto animate-fade-in-delay">
-                    Leading the future of agriculture through innovative consultation services, 
-                    comprehensive training programs, expert consulting, and strategic advisory services.
-                </p>
-            </div>
-        </section>
+<section class="relative overflow-hidden py-16 bg-gradient-to-r from-green-800/60 to-green-900/60">
+  <!-- Background Image -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <img 
+      src="https://images.pexels.com/photos/1268101/pexels-photo-1268101.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+      alt="Agricultural consultation" 
+      class="w-full h-full object-contain lg:object-cover object-center transition-all duration-500"
+      style="object-position: center; max-height: 100%;"
+    />
+    <div class="absolute inset-0 bg-black/40"></div> <!-- subtle overlay for readability -->
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-4 text-center text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+      About Ifa-Langa
+    </h1>
+    <p class="text-xl max-w-3xl mx-auto animate-fade-in-delay">
+      Leading the future of agriculture through innovative consultation services, 
+      comprehensive training programs, expert consulting, and strategic advisory services.
+    </p>
+  </div>
+</section>
+
+
 
         <!-- Mission Section -->
-        <section class="py-16 relative">
-            <!-- Decorative Images -->
-            <div class="absolute top-10 left-10 w-24 h-24 opacity-10 rounded-full overflow-hidden hidden lg:block">
-                <img 
-                    src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=200" 
-                    alt="Agricultural field" 
-                    class="w-full h-full object-cover"
-                />
+<!-- Mission Section -->
+<section class="py-16 relative overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img 
+            src="https://i.pinimg.com/736x/16/0f/ea/160fea8fb41001beab1df8bdb02c148d.jpg" 
+            alt="Agricultural field background" 
+            class="w-full h-full object-cover"
+        />
+        <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 animate-fade-in">Our Mission</h2>
+            <p class="text-lg text-white mb-8 animate-fade-in-delay">
+                At Ifa-Langa, we're dedicated to empowering farmers with the knowledge, tools, and strategies 
+                they need to thrive in an ever-evolving agricultural landscape. Our mission is to bridge the gap 
+                between cutting-edge agricultural science and practical, profitable farming operations through our 
+                three core services: Training, Consulting, and Advisory Services.
+            </p>
+            <div class="bg-white bg-opacity-90 p-8 rounded-2xl shadow-lg animate-slide-up">
+                <p class="text-xl text-green-800 font-medium italic">
+                    "Through comprehensive training, expert consulting, and strategic advisory services, 
+                    we empower farmers to achieve sustainable success and feed the world responsibly."
+                </p>
             </div>
-            <div class="absolute bottom-10 right-10 w-32 h-32 opacity-10 rounded-full overflow-hidden hidden lg:block">
-                <img 
-                    src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=200" 
-                    alt="Farm equipment" 
-                    class="w-full h-full object-cover"
-                />
-            </div>
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#8AA624] mb-8 animate-fade-in">Our Mission</h2>
-                    <p class="text-lg text-gray-600 mb-8 animate-fade-in-delay">
-                        At Ifa-Langa, we're dedicated to empowering farmers with the knowledge, tools, and strategies 
-                        they need to thrive in an ever-evolving agricultural landscape. Our mission is to bridge the gap 
-                        between cutting-edge agricultural science and practical, profitable farming operations through our 
-                        three core services: Training, Consulting, and Advisory Services.
-                    </p>
-                    <div class="bg-gradient-to-r from-green-50 to-green-100 p-8 rounded-2xl shadow-lg animate-slide-up">
-                        <p class="text-xl text-green-800 font-medium italic">
-                            "Through comprehensive training, expert consulting, and strategic advisory services, 
-                            we empower farmers to achieve sustainable success and feed the world responsibly."
-                        </p>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </div>
+</section>
         </section>
 
         <!-- Values Section -->
-       <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
+  <section class="py-16 relative overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img 
+            src="https://i.pinimg.com/1200x/cf/44/c7/cf44c7bba58cbb20d044d5f4e0297018.jpg" 
+            alt="Agricultural background" 
+            class="w-full h-full object-cover"
+        />
+        <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-[#8AA624] mb-4">Our Core Values</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Values</h2>
+            <p class="text-lg text-white max-w-2xl mx-auto">
                 These principles guide everything we do and shape how we serve our farming community.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Value 1: Precision Agriculture -->
-            <div class="bg-gradient-to-br from-[#FFDF88] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-slide-up">
+            <div class="bg-gradient-to-br from-[#A76545] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up">
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="target" class="h-8 w-8 text-[#8AA624]"></i>
+                    <div class="flex-shrink-0 transition-transform duration-300">
+                        <i data-lucide="target" class="h-8 w-8 text-white"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#8AA624] transition-colors">Precision Agriculture</h3>
-                        <p class="text-gray-700 group-hover:text-gray-900 transition-colors">We leverage data-driven insights and modern technology to optimize every aspect of your farming operation.</p>
+                        <h3 class="text-xl font-semibold text-white mb-2">Precision Agriculture</h3>
+                        <p class="text-white">We leverage data-driven insights and modern technology to optimize every aspect of your farming operation.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Value 2: Partnership Approach -->
-            <div class="bg-gradient-to-br from-[#FFDF88] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-slide-up" style="animation-delay: 200ms">
+            <div class="bg-gradient-to-br from-[#A76545] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up" style="animation-delay: 200ms">
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="users" class="h-8 w-8 text-[#8AA624]"></i>
+                    <div class="flex-shrink-0 transition-transform duration-300">
+                        <i data-lucide="users" class="h-8 w-8 text-white"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#8AA624] transition-colors">Partnership Approach</h3>
-                        <p class="text-gray-700 group-hover:text-gray-900 transition-colors">We work closely with farmers, understanding their unique challenges and goals to deliver personalized solutions.</p>
+                        <h3 class="text-xl font-semibold text-white mb-2">Partnership Approach</h3>
+                        <p class="text-white">We work closely with farmers, understanding their unique challenges and goals to deliver personalized solutions.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Value 3: Innovation Focus -->
-            <div class="bg-gradient-to-br from-[#FFDF88] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-slide-up" style="animation-delay: 400ms">
+            <div class="bg-gradient-to-br from-[#A76545] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up" style="animation-delay: 400ms">
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="lightbulb" class="h-8 w-8 text-[#8AA624]"></i>
+                    <div class="flex-shrink-0 transition-transform duration-300">
+                        <i data-lucide="lightbulb" class="h-8 w-8 text-white"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#8AA624] transition-colors">Innovation Focus</h3>
-                        <p class="text-gray-700 group-hover:text-gray-900 transition-colors">Constantly researching and implementing the latest agricultural innovations to stay ahead of industry trends.</p>
+                        <h3 class="text-xl font-semibold text-white mb-2">Innovation Focus</h3>
+                        <p class="text-white">Constantly researching and implementing the latest agricultural innovations to stay ahead of industry trends.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Value 4: Proven Excellence -->
-            <div class="bg-gradient-to-br from-[#FFDF88] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-slide-up" style="animation-delay: 600ms">
+            <div class="bg-gradient-to-br from-[#A76545] to-[#FFA55D] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up" style="animation-delay: 600ms">
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="award" class="h-8 w-8 text-[#8AA624]"></i>
+                    <div class="flex-shrink-0 transition-transform duration-300">
+                        <i data-lucide="award" class="h-8 w-8 text-white"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#8AA624] transition-colors">Proven Excellence</h3>
-                        <p class="text-gray-700 group-hover:text-gray-900 transition-colors">Our track record speaks for itself with consistent results and long-term client relationships.</p>
+                        <h3 class="text-xl font-semibold text-white mb-2">Proven Excellence</h3>
+                        <p class="text-white">Our track record speaks for itself with consistent results and long-term client relationships.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Team Section -->
 <section class="py-16">
     <div class="container mx-auto px-4">
@@ -293,17 +311,16 @@
 
         <div class="flex justify-center">
             <div class="w-full max-w-md">
-                <!-- Team Member 2 -->
-                <div class="text-center bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-fade-in-up" style="animation-delay: 200ms">
-                    <img
-                        src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=400"
-                        alt="Michael Chen"
-                        class="w-32 h-32 rounded-full mx-auto mb-4 object-cover group-hover:scale-110 transition-transform duration-300 shadow-lg"
-                    />
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1 group-hover:text-green-600 transition-colors">Michael Chen</h3>
-                    <p class="text-green-600 font-medium mb-4 group-hover:text-green-700 transition-colors">Soil Management Expert</p>
-                    <p class="text-gray-600 text-sm group-hover:text-gray-700 transition-colors">Certified soil scientist specializing in precision nutrient management and soil health optimization.</p>
-                </div>
+              <div class="text-center bg-gradient-to-br from-[#FCB53B] to-[#B45253] p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-fade-in-up" style="animation-delay: 200ms">
+    <img
+        src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=400"
+        alt="Michael Chen"
+        class="w-32 h-32 rounded-full mx-auto mb-4 object-cover group-hover:scale-110 transition-transform duration-300 shadow-lg border-4 border-white"
+    />
+    <h3 class="text-xl font-semibold text-white mb-1 group-hover:text-gray-100 transition-colors">Michael Chen</h3>
+    <p class="text-white font-medium mb-4 group-hover:text-gray-100 transition-colors opacity-90">Soil Management Expert</p>
+    <p class="text-white text-sm group-hover:text-gray-100 transition-colors opacity-80">Certified soil scientist specializing in precision nutrient management and soil health optimization.</p>
+</div>
             </div>
         </div>
     </div>
@@ -379,7 +396,7 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="Testhome.html" class="text-gray-300 hover:text-green-400 transition-colors">Home</a></li>
+                        <li><a href="Header.html.html" class="text-gray-300 hover:text-green-400 transition-colors">Home</a></li>
                         <li><a href="About.html" class="text-gray-300 hover:text-green-400 transition-colors">About Us</a></li>
                         <li><a href="#services" class="text-gray-300 hover:text-green-400 transition-colors">Services</a></li>
                         <li><a href="#contact" class="text-gray-300 hover:text-green-400 transition-colors">Contact</a></li>

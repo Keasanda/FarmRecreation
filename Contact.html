@@ -60,7 +60,7 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="Testhome.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
+                    <a href="Header.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
                     <a href="About.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">About</a>
                     <a href="Service.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Services</a>
                     <a href="Contact.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Contact</a>
@@ -80,7 +80,7 @@
             <!-- Mobile Menu (Hidden by default) -->
             <div id="mobile-menu" class="hidden md:hidden bg-white py-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-3 px-2">
-                    <a href="Testhome.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
+                    <a href="Header.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Home</a>
                     <a href="About.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">About</a>
                     <a href="Service.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Services</a>
                     <a href="Contact.html" class="text-gray-700 hover:text-[#8AA624] font-medium px-3 py-2 rounded-md transition-colors duration-200">Contact</a>
@@ -93,23 +93,28 @@
     <!-- Original Contact Page Content -->
     <div>
         <!-- Hero Section -->
-        <section class="py-16 bg-gradient-to-r from-[#FFDF88] to-[#FFA55D] relative overflow-hidden">
-            <!-- Background Image -->
-            <div class="absolute inset-0 opacity-20">
-                <img 
-                    src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Agricultural consultation" 
-                    class="w-full h-full object-cover"
-                />
-            </div>
-            <div class="container mx-auto px-4 text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold  text-[#FFFFFF] mb-6">Contact Us</h1>
-                <p class="text-xl max-w-3xl mx-auto">
-                    Ready to transform your agricultural operation? Get in touch with our expert team 
-                    for personalized consultation and support.
-                </p>
-            </div>
-        </section>
+    <section class="py-16 bg-gradient-to-r relative overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img 
+            src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+            alt="Agricultural consultation" 
+            class="w-full h-full object-cover"
+        />
+        <!-- Optional: dark overlay to make text more readable -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+
+    <!-- Text content -->
+    <div class="relative container mx-auto px-4 text-center text-white z-10">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+        <p class="text-xl max-w-3xl mx-auto">
+            Ready to transform your agricultural operation? Get in touch with our expert team 
+            for personalized consultation and support.
+        </p>
+    </div>
+</section>
+
 
         <!-- Contact Information -->
         <section class="py-16 relative">
@@ -128,69 +133,82 @@
                     />
                 </div>
             </div>
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#8AA624] mb-4">Get In Touch</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Multiple ways to reach our agricultural experts. Choose the method that works best for you.
-                    </p>
+           <section class="py-16 relative overflow-hidden">
+    <!-- Background Image (Placeholder) -->
+    <div class="absolute inset-0">
+        <img 
+            src="https://images.pexels.com/photos/175389/pexels-photo-175389.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+            alt="Contact background placeholder" 
+            class="w-full h-full object-cover"
+        />
+        <!-- Dark overlay for readability -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#8AA624] mb-4">Get In Touch</h2>
+            <p class="text-lg text-white max-w-2xl mx-auto">
+                Multiple ways to reach our agricultural experts. Choose the method that works best for you.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <!-- Phone -->
+            <div class="text-center p-6 bg-white/90 rounded-xl shadow-lg hover:shadow-xl transition-shadow backdrop-blur-sm">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="phone" class="h-6 w-6 text-green-600"></i>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                    <!-- Phone -->
-                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-center mb-4">
-                            <i data-lucide="phone" class="h-6 w-6 text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
-                        <div class="space-y-1 mb-3">
-                            <p class="text-gray-700 font-medium">+27 12 345 6789</p>
-                            <p class="text-gray-700 font-medium">+27 12 345 6790</p>
-                        </div>
-                        <p class="text-sm text-gray-500">Call us during business hours</p>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-center mb-4">
-                            <i data-lucide="mail" class="h-6 w-6 text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                        <div class="space-y-1 mb-3">
-                            <p class="text-gray-700 font-medium">info@ifa-langa.co.za</p>
-                            <p class="text-gray-700 font-medium">support@ifa-langa.co.za</p>
-                        </div>
-                        <p class="text-sm text-gray-500">We respond within 24 hours</p>
-                    </div>
-
-                    <!-- Office Location -->
-                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-center mb-4">
-                            <i data-lucide="map-pin" class="h-6 w-6 text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Office Location</h3>
-                        <div class="space-y-1 mb-3">
-                            <p class="text-gray-700 font-medium">123 Farm Road</p>
-                            <p class="text-gray-700 font-medium">Agricultural Valley, AV 12345</p>
-                        </div>
-                        <p class="text-sm text-gray-500">Visit our main office</p>
-                    </div>
-
-                    <!-- Business Hours -->
-                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                        <div class="flex justify-center mb-4">
-                            <i data-lucide="clock" class="h-6 w-6 text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Business Hours</h3>
-                        <div class="space-y-1 mb-3">
-                            <p class="text-gray-700 font-medium">Mon - Fri: 8:00 AM - 6:00 PM</p>
-                            <p class="text-gray-700 font-medium">Sat: 9:00 AM - 4:00 PM</p>
-                        </div>
-                        <p class="text-sm text-gray-500">Emergency consultations available</p>
-                    </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                <div class="space-y-1 mb-3">
+                    <p class="text-gray-700 font-medium">+27 12 345 6789</p>
+                    <p class="text-gray-700 font-medium">+27 12 345 6790</p>
                 </div>
+                <p class="text-sm text-gray-500">Call us during business hours</p>
             </div>
-        </section>
+
+            <!-- Email -->
+            <div class="text-center p-6 bg-white/90 rounded-xl shadow-lg hover:shadow-xl transition-shadow backdrop-blur-sm">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="mail" class="h-6 w-6 text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                <div class="space-y-1 mb-3">
+                    <p class="text-gray-700 font-medium">info@ifa-langa.co.za</p>
+                    <p class="text-gray-700 font-medium">support@ifa-langa.co.za</p>
+                </div>
+                <p class="text-sm text-gray-500">We respond within 24 hours</p>
+            </div>
+
+            <!-- Office Location -->
+            <div class="text-center p-6 bg-white/90 rounded-xl shadow-lg hover:shadow-xl transition-shadow backdrop-blur-sm">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="map-pin" class="h-6 w-6 text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Office Location</h3>
+                <div class="space-y-1 mb-3">
+                    <p class="text-gray-700 font-medium">123 Farm Road</p>
+                    <p class="text-gray-700 font-medium">Agricultural Valley, AV 12345</p>
+                </div>
+                <p class="text-sm text-gray-500">Visit our main office</p>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="text-center p-6 bg-white/90 rounded-xl shadow-lg hover:shadow-xl transition-shadow backdrop-blur-sm">
+                <div class="flex justify-center mb-4">
+                    <i data-lucide="clock" class="h-6 w-6 text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Business Hours</h3>
+                <div class="space-y-1 mb-3">
+                    <p class="text-gray-700 font-medium">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                    <p class="text-gray-700 font-medium">Sat: 9:00 AM - 4:00 PM</p>
+                </div>
+                <p class="text-sm text-gray-500">Emergency consultations available</p>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Contact Form & Map Section -->
         <section class="py-16 bg-gray-50">
@@ -422,7 +440,7 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="Testhome.html" class="text-gray-300 hover:text-green-400 transition-colors">Home</a></li>
+                        <li><a href="Header.html" class="text-gray-300 hover:text-green-400 transition-colors">Home</a></li>
                         <li><a href="About.html" class="text-gray-300 hover:text-green-400 transition-colors">About Us</a></li>
                         <li><a href="#services" class="text-gray-300 hover:text-green-400 transition-colors">Services</a></li>
                         <li><a href="Contact.html" class="text-gray-300 hover:text-green-400 transition-colors">Contact</a></li>
